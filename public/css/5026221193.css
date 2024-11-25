@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pricing-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.header-container {
+    background-color: #242424;
+    padding: 80px;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.pricing-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #a4b8c9;
+}
+
+.pricing-section p {
+    font-size: 14px;
+    color: #a4b8c9;
+}
+
+.pricing-container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; 
+}
+
+.pricing-card {
+    background-color: #fff;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+.popular-label {
+    width: 100%;
+    background-color: #c4b1d4;
+    color: #333;
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 50px; 
+}
+
+.card-header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    color: #333;
+    background-color: #333;
+    font-size: 14px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 50px; 
+}
+
+.professional .card-header {
+    background-color: #c4b1d4;
+}
+
+.personal .card-header {
+    background-color: #ffd2d7;
+}
+
+.business .card-header {
+    background-color: #ffc862;
+}
+
+.card-price {
+    margin: 20px 0;
+    text-align: center;
+    height: 80px;
+}
+
+.card-price h1 {
+    font-size: 36px;
+    color: #555;
+}
+
+.card-price span {
+    font-size: 24px;
+}
+
+.card-price .per-month {
+    font-size: 14px;
+    color: #999;
+}
+
+.features {
+    list-style: none;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.features li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+}
+
+.features strong {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 80%;
+    text-align: center;
+    margin-top: auto; 
+}
+.btn:hover {
+    background-color: #ddd; 
+    color: #fff; 
+}
+
+.btn-disabled {
+    background-color: #ddd;
+    color: #aaa;
+    padding: 10px 20px;
+    border: none;
+    cursor: not-allowed;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+}
