@@ -11,21 +11,17 @@ class PegawaiController extends Controller
     	return "<h1>" .$nama . "</h1>" ;
 
     }
+
     public function formulir(){
 
     	return view('formulir');
-    }
-    public function proses(Request $request){
+
+}
+
+public function proses(Request $request){
         $nama = $request->input('nama');
      	$alamat = $request->input('alamat');
         return "Nama : ".$nama.", Alamat : ".$alamat;
-    }
-    public function tambah()
-{
-
-	// memanggil view tambah
-	return view('tambah');
-
 }
 
 }

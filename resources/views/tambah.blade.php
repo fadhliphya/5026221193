@@ -3,7 +3,7 @@
 @section('tulisan1','Data Pegawai')
 
 @section('link1')
-<a href="/pegawai">Kembali</a>
+<a href="/pegawai"> Kembali</a>
 @endsection
 
 @section('konten')
@@ -35,8 +35,10 @@
         </div>
         <div class="row mb-3">
             <div class="col-sm-12">
-                <input type="submit" value="Simpan Data" class="btn btn-primary">
+            <center><input type="submit" value="Simpan Data" class="btn btn-primary"></center>
         </div>
     </div>
 	</form>
     @endsection
+
+

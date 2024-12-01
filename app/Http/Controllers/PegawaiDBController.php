@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\DB;
 class PegawaiDBController extends Controller
 {
     //
-    public function index()
+    public function indexPegawai()
     {
     	// mengambil data dari table pegawai
     	//$pegawai = DB::table('pegawai')->get(); //hasilnya adalah array 2D, ini langsung manggil nama table, kalo ga pake pagination pake ini pas eas, klo ada tombol box(?) pake get bkn pagination
         $pegawai = DB::table('pegawai')->paginate(10) ; //jumlah yang dimunculkan perhalaman
 
     	// mengirim data pegawai ke view index
-    	return view('index',['pegawai' => $pegawai]);
+    	return view('indexPegawai',['pegawai' => $pegawai]);
 
     }
 
@@ -92,7 +92,7 @@ public function cari(Request $request)
 		->paginate(); //paginate nya kosong ntr munculnya auto
 
     	// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('indexPegawai',['pegawai' => $pegawai]);
 
 	}
 

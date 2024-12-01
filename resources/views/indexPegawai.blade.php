@@ -9,13 +9,18 @@
 @section('konten')
 
 	<br/>
-    <p>Cari Nama Pegawai :</p>
 	<form action="/pegawai/cari" method="GET">
-		<input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
-		<input type="submit" value="CARI"class="btn btn-success">
+        <div class="row mb-3">
+            <label for="cari" class="col-sm-2 col-form-label">Cari Nama Pegawai :</label>
+            <div class="col-sm-6">
+              <input type="text" name="cari" class="form-control" id="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
+            </div>
+            <div class="col-sm-4">
+                <input type="submit" value="CARI"class="btn btn-success">
+              </div>
+          </div>
 	</form>
 	<br/>
-
 	<table class="table table-striped table-hover">
 		<tr>
 			<th>Nama</th>
@@ -31,9 +36,9 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}"class="btn btn-danger">Edit</a>
+				<a href="/pegawai/edit/{{ $p->pegawai_id }}"class="btn btn-danger"><i class="fa-solid fa-pen-to-square"></i></a>
 				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-info">Hapus</a>
+				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-info"><i class="fa-solid fa-trash"></i></a>
 			</td>
 		</tr>
 		@endforeach
