@@ -61,10 +61,18 @@ Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiDBController@tambah');
 Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
 Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiDBController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
 // Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiDBController@hapus');
 
 Route::get('/agen', 'App\Http\Controllers\AgenController@indexAgen');
 Route::get('/agen/tambah', 'App\Http\Controllers\AgenController@tambahagen');
 Route::post('/agen/store', [App\Http\Controllers\AgenController::class, 'storeAgen'])->name('agen.store');
+
+Route::get('/keranjang', 'App\Http\Controllers\KeranjangBelanjaController@indexKeranjang');
+Route::get('/keranjang/tambah', 'App\Http\Controllers\KeranjangBelanjaController@tambah');
+Route::post('/keranjang/store', 'App\Http\Controllers\KeranjangBelanjaController@store');
+Route::post('/keranjang/cari', 'App\Http\Controllers\KeranjangBelanjaController@cari');
+Route::get('/keranjang/hapus/{id}', 'App\Http\Controllers\KeranjangBelanjaController@hapus');
+
 
 

@@ -34,6 +34,7 @@
             <td>{{ $agen->namaagen }}</td>
             <td>{{ $agen->jumlahagen }}</td>
             <td>{{ $agen->tersedia == 'Y' ? 'Ya' : 'Tidak' }}</td>
+
             <td>
                 <a href="/agen/edit/{{ $agen->kodeagen }}" class="btn btn-danger"><i class="fa-solid fa-pen-to-square"></i></a>
                 |
