@@ -1,14 +1,12 @@
 @extends('template')
-
 @section('tulisan1','Data Agen')
-
 @section('link1')
 <a href="/agen"> Kembali</a>
 @endsection
 
 @section('konten')
-    <form action="{{ route('agen.store') }}" method="post">
-        {{ csrf_field() }}
+    <form action="/agen/store" method="post">
+        {{ csrf_field() }}  <!-- CSRF token should be inside the form tag -->
         <div class="row mb-3">
             <label for="namaagen" class="col-sm-2 col-form-label">Nama Agen</label>
             <div class="col-sm-10">

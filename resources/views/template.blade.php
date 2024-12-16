@@ -11,24 +11,25 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #E5E4E2;">
         <div class="container-fluid">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/pegawai">Pegawai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/agen">Agen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/keranjang">Latihan EAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EAS</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
+
 
 <div class="container">
     <h2>Maureen Ghassani Fadhliphya - 5026221193</h2>
@@ -37,7 +38,7 @@
     @yield('link1')
 
     <br/>
-	<br/>
+    <br/>
 
     @yield('konten')
 

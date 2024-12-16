@@ -65,8 +65,10 @@ Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
 // Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiDBController@hapus');
 
 Route::get('/agen', 'App\Http\Controllers\AgenController@indexAgen');
-Route::get('/agen/tambah', 'App\Http\Controllers\AgenController@tambahagen');
-Route::post('/agen/store', [App\Http\Controllers\AgenController::class, 'storeAgen'])->name('agen.store');
+Route::get('/agen/tambah', 'App\Http\Controllers\AgenController@tambah');;
+Route::post('/agen/store', 'App\Http\Controllers\AgenController@store');
+Route::get('/agen/hapus/{id}', 'App\Http\Controllers\AgenController@hapus');
+Route::get('/agen/edit/{id}','App\Http\Controllers\AgenController@edit');
 
 Route::get('/keranjang', 'App\Http\Controllers\KeranjangBelanjaController@indexKeranjang');
 Route::get('/keranjang/tambah', 'App\Http\Controllers\KeranjangBelanjaController@tambah');

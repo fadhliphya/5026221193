@@ -17,7 +17,7 @@ class KeranjangBelanjaController extends Controller
     // Menampilkan form tambah data
     public function tambah()
     {
-        return view('tambah');
+        return view('tambahKeranjang');
     }
 
     // Menyimpan data baru ke tabel keranjangbelanja

@@ -1,11 +1,8 @@
 @extends('template')
-
 @section('tulisan1', 'Data Agen')
-
 @section('link1')
     <a href="/agen/tambah" class="btn btn-primary"> + Tambah Agen Baru</a>
 @endsection
-
 @section('konten')
     <br/>
     <form action="/agen/cari" method="GET">
@@ -28,26 +25,23 @@
             <th>Tersedia</th>
             <th>Opsi</th>
         </tr>
-        @foreach($agens as $agen)
+        @foreach($agen as $item)  <!-- Changed $agens to $agen -->
         <tr>
-            <td>{{ $agen->kodeagen }}</td>
-            <td>{{ $agen->namaagen }}</td>
-            <td>{{ $agen->jumlahagen }}</td>
-            <td>{{ $agen->tersedia == 'Y' ? 'Ya' : 'Tidak' }}</td>
-
+            <td>{{ $item->kodeagen }}</td>
+            <td>{{ $item->namaagen }}</td>
+            <td>{{ $item->jumlahagen }}</td>
+            <td>{{ $item->tersedia == 'Y' ? 'Ya' : 'Tidak' }}</td>
             <td>
-                <a href="/agen/edit/{{ $agen->kodeagen }}" class="btn btn-danger"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="/agen/edit/{{ $item->kodeagen }}" class="btn btn-danger"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
                 |
-                <a href="/agen/hapus/{{ $agen->kodeagen }}" class="btn btn-info"><i class="fa-solid fa-trash"></i></a>
+                <a href="/agen/hapus/{{ $item->kodeagen }}" class="btn btn-info"><i class="fa-solid fa-trash"></i>Hapus</a>
             </td>
         </tr>
         @endforeach
     </table>
-
     <br/>
-    Halaman : {{ $agens->currentPage() }} <br/>
-    Jumlah Data : {{ $agens->total() }} <br/>
-    Data Per Halaman : {{ $agens->perPage() }} <br/>
-
-    {{ $agens->links() }}
+    Halaman : {{ $agen->currentPage() }} <br/>
+    Jumlah Data : {{ $agen->total() }} <br/>
+    Data Per Halaman : {{ $agen->perPage() }} <br/>
+    {{ $agen->links() }}
 @endsection
