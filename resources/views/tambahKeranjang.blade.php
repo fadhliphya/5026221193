@@ -3,7 +3,7 @@
 @section('tulisan1','Beli')
 
 @section('link1')
-<a href="/keranjang"> Kembali</a>
+<a href="/karyawan"> Kembali</a>
 @endsection
 
 @section('konten')

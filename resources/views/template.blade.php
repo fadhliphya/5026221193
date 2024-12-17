@@ -24,7 +24,7 @@
                     <a class="nav-link" href="/keranjang">Latihan EAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">EAS</a>
+                    <a class="nav-link" href="/karyawan">EAS</a>
                 </li>
             </ul>
         </div>
